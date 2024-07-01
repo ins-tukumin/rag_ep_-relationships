@@ -152,7 +152,7 @@ if student_id:
                 
         with st.container():
             if st.session_state.count == 3:
-                html_link = '<a href="https://www.example.com" target="_blank">これで会話は終了です。こちらをクリックしてアンケートに回答してください。</a>'
+                html_link = '<a href="https://qualtricsxmlvqmp6rsc.qualtrics.com/jfe/form/SV_3VGCpfabyWVYSJU" target="_blank">これで会話は終了です。こちらをクリックしてアンケートに回答してください。</a>'
                 st.markdown(html_link, unsafe_allow_html=True)
             else:
                 user_message = st.text_input("内容を入力して送信ボタンを押してください", key="user_message")
