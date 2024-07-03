@@ -78,7 +78,19 @@ select_temperature = 0.0
 if student_id:
     if not firebase_admin._apps:
         private_key = st.secrets["private_key"].replace('\\n', '\n')
-        cred = credentials.Certificate('rag-ep-relationships-firebase-adminsdk-f14cb-938997dee0.json') 
+        cred = credentials.Certificate({
+              "type": "service_account",
+              "project_id": "rag-ep-relationships",
+              "private_key_id": "61d43309b7c584f1a8949768fd18d55b10157b72",
+              "private_key": private_key,
+              "client_email": "firebase-adminsdk-f14cb@rag-ep-relationships.iam.gserviceaccount.com",
+              "client_id": "108601923332034616191",
+              "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+              "token_uri": "https://oauth2.googleapis.com/token",
+              "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+              "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-f14cb%40rag-ep-relationships.iam.gserviceaccount.com",
+              "universe_domain": "googleapis.com"
+        }) 
         default_app = firebase_admin.initialize_app(cred)
     db = firestore.client()
     
