@@ -63,7 +63,7 @@ prompt = PromptTemplate(
 )
 
 # UIの設定
-student_id = st.text_input("学籍番号を半角で入力してエンターを押してください")
+student_id = st.text_input("IDを入力してエンターを押してください")
 
 #with st.sidebar:
     #user_api_key = st.text_input(
