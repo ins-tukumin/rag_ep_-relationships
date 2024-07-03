@@ -77,6 +77,7 @@ select_temperature = 0.0
 
 if student_id:
     if not firebase_admin._apps:
+        private_key = st.secrets["private_key"].replace('\\n', '\n')
         cred = credentials.Certificate('rag-ep-relationships-firebase-adminsdk-f14cb-938997dee0.json') 
         default_app = firebase_admin.initialize_app(cred)
     db = firestore.client()
