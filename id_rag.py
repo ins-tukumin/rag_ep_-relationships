@@ -164,7 +164,7 @@ if student_id:
                 message(st.session_state.generated[i], key=str(key_generated), avatar_style="micah")
                 
         with st.container():
-            if st.session_state.count == 3:
+            if st.session_state.count >= 5:
                 html_link = '<a href="https://qualtricsxmlvqmp6rsc.qualtrics.com/jfe/form/SV_3VGCpfabyWVYSJU" target="_blank">これで会話は終了です。こちらをクリックしてアンケートに回答してください。</a>'
                 st.markdown(html_link, unsafe_allow_html=True)
             else:
