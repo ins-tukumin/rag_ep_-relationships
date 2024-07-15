@@ -201,7 +201,7 @@ if student_id:
                 html_link = '<a href="https://nagoyapsychology.qualtrics.com/jfe/form/SV_eEVBQ7a0d8iVvq6" target="_blank">これで会話は終了です。こちらをクリックしてアンケートに回答してください。</a>'
                 st.markdown(html_link, unsafe_allow_html=True)
             else:
-                user_message = st.text_input("内容を入力して送信ボタンを押してください", key="user_message")
+                user_message = st.text_area("内容を入力して送信ボタンを押してください", key="user_message")
                 st.button("送信", on_click=on_input_change)
         # ターン数に応じた機能を追加
         #--------------------------------------------
